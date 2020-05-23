@@ -2,12 +2,12 @@
 // @name         Steam Reviews Filter
 // @description  remove some reviews contain(s) key words
 // @author       desc_inno
-// @namespace    https://github.com/desc70865/steam-reviews-filter
-// @supportURL   https://github.com/desc70865/steam-reviews-filter/issues
-// @updateURL    https://github.com/desc70865/steam-reviews-filter/steam-reviews-filter.user.js
-// @version      0.2
+// @namespace    https://github.com/desc70865/Steam-Reviews-Filter
+// @supportURL   https://github.com/desc70865/Steam-Reviews-Filter/issues
+// @updateURL    https://github.com/desc70865/Steam-Reviews-Filter/raw/master/Steam-Reviews-Filter.user.js
+// @version      0.2.1
 // @icon         https://store.steampowered.com/favicon.ico
-// @match        https://steamcommunity.com/app/*/reviews/*
+// @match        https://steamcommunity.com/app/*/reviews*
 // @match        https://store.steampowered.com/app/*
 // @match        https://store.steampowered.com/
 // @grant        none
@@ -20,7 +20,6 @@
     };
     remove(flag);
     window.setInterval(function(){ remove(flag); }, 3000); // 可按需设置刷新间隔
-
 })();
 
 function remove(flag){
@@ -35,6 +34,6 @@ function remove(flag){
         let t = x.innerText.match(reg_filter)!=null;
         if(t){
             x.hidden = true;
-        }
-    })
+        };
+    });
 };
