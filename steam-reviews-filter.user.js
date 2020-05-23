@@ -24,7 +24,7 @@
 
 function remove(domain){
     var reviews;
-    var reg_filter = /portal|PORTAL|Portal|传送门/g; // 在此设置屏蔽关键字,多个用|隔开,形如: /我是傻A|我是傻B|我是傻C/g
+    var reg_filter = /我是傻逼/g; // 在此设置屏蔽关键字,多个用|隔开,形如: /我是傻A|我是傻B|我是傻C/g
     if(domain == "steamcommunity.com"){
         reviews = document.querySelectorAll('.apphub_CardTextContent');
     }else{
